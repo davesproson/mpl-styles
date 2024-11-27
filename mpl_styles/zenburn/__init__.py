@@ -1,4 +1,19 @@
 import matplotlib as mpl
+from IPython.core.display import HTML
+
+# Make widget backgrounds transparent
+HTML("""
+     <style>
+     .cell-output-ipywidget-background {
+     background-color: transparent !important;
+    }
+     .jp-OutputArea-output {
+     background-color: transparent;
+    }
+     </style>
+     """)
+
+# Set some default colors
 bgcol = '#3f3f3f'
 mpl.rcParams['figure.figsize'] = (12, 6)
 mpl.rcParams['axes.facecolor'] = bgcol
@@ -12,8 +27,7 @@ mpl.rcParams['figure.edgecolor'] = bgcol
 mpl.rcParams['savefig.facecolor'] = bgcol
 mpl.rcParams['savefig.edgecolor'] = bgcol
 
-#cmap = mpl.cm.get_cmap('inferno_r', 8)
-#c = cmap.colors
+# Set plot colour cycling defaults
 cmap = [
     [9.88362e-01, 9.98364e-01, 6.44924e-01, 1.00000e+00],
     [7.29909e-01, 2.12759e-01, 3.33861e-01, 1.00000e+00],
